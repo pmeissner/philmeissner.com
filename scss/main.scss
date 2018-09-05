@@ -1,0 +1,17 @@
+h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 15vw;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "muscle-wide";
+	font-weight: 400;
+	}
+
+.blast-root {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
+	}
