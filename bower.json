@@ -33,6 +33,7 @@
   ],
   "private": true,
   "dependencies": {
-    "blast-text": "^2.0.0"
+    "blast-text": "^2.0.0",
+    "aos": "jquery-aos#^2.3.3"
   }
 }

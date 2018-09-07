@@ -32,12 +32,26 @@ html.no-js(lang='en')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
 		link(rel='stylesheet', href='css/main.css')
 		link(rel="stylesheet" href="https://use.typekit.net/mof1vvv.css")
+		link(rel='stylesheet', href='css/aos.css')
 	body
-		// Add your site or application content here
-		h1 Phil Meissner
+		mixin ltr(letter,delay)
+			span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
+				span= letter
+		h1
+			+ltr('P','300')
+			+ltr('h','400')
+			+ltr('I','500')
+			+ltr('l','600')
+			+ltr('M','700')
+			+ltr('e','800')
+			+ltr('i','900')
+			+ltr('s','1000')
+			+ltr('S','1100')
+			+ltr('n','1200')
+			+ltr('E','1300')
+			+ltr('r','1400')
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
 		script(src='js/main-min.js')
-		// Google Analytics: change UA-XXXXX-Y to be your site's ID.
 		script.
 			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
 			ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')

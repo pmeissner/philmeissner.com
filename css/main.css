@@ -1,14 +1,28 @@
 h1 {
   margin: 0;
   padding: 0;
-  font-size: 15vw;
+  font-size: 200px;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  font-family: "hobeaux-rococeaux", "muscle-wide";
-  font-weight: 400; }
-
-.blast-root {
+  font-family: "rosella-deco", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
+  font-weight: 400;
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr; }
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: all 1s;
+  overflow: hidden;
+  width: 100%; }
+  h1 > span {
+    background-image: linear-gradient(to top left, #a18cd1 0%, #fbc2eb 100%);
+    display: flex;
+    align-items: center; }
+    h1 > span span {
+      width: 100%; }
+  @media screen and (min-width: 80em) {
+    h1 {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
