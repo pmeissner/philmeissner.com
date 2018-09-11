@@ -5,11 +5,15 @@ $md:	"screen and (min-width: 48em)";
 $lg:	"screen and (min-width: 64em)";
 $xl:	"screen and (min-width: 80em)";
 
-h1 {
+*, *:before, *:after { box-sizing: border-box; }
 
+h1 {
+	background: #000;
+	border: .33vw solid #000;
+	grid-gap: .33vw;
 	margin: 0;
 	padding: 0;
-	font-size: 200px;
+	font-size: 15vw;
 	line-height: 1;
 	text-align: center;
 	text-transform: uppercase;
@@ -19,8 +23,6 @@ h1 {
 	height: 100vh;
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: stretch;
-	grid-row-gap: 0;
-	grid-column-gap: 0;
   grid-template-rows: 1fr 1fr 1fr;
   transition: all 1s;
   overflow: hidden;
@@ -30,3 +32,66 @@ h1 {
   }
 	@media #{$xl} { grid-template-columns: 1fr 1fr 1fr 1fr; }
 	}
+
+body.work {
+	h1 {
+		font-family: "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
+	}
+}
+
+
+/* Estilo iOS */
+.switch__container {
+  margin: 30px auto;
+  width: 120px;
+}
+
+.switch {
+  visibility: hidden;
+  position: absolute;
+  margin-left: -9999px;
+}
+
+.switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.switch + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+.switch + label:before,
+.switch + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+.switch + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch + label:after {
+  width: 62px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+.switch:checked + label:before {
+  background-color: #8ce196;
+}
+.switch:checked + label:after {
+  transform: translateX(60px);
+}

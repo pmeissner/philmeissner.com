@@ -1,58 +1,25 @@
-- var siteURL = "https://philmeissner.com"
-- var siteTitle = "Phil Meissner Personal Website"
-- var siteDescription = "Hi some description goes here"
+block vars
 
-doctype html
-html.no-js(lang='en')
-	head
-		meta(charset='utf-8')
-		meta(http-equiv='x-ua-compatible', content='ie=edge')
-		title Phil Meissner - Print, Branding, Web Designer
-		meta(name='description', content='')
-		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-		link(rel='manifest', href='site.webmanifest')
-		link(rel='apple-touch-icon', href='icon.png')
-		meta(property='og:url', content=siteURL)
-		meta(property='og:type', content='website')
-		meta(property='og:title', content=siteTitle)
-		meta(property='og:image', content='https://www.example.com/path/to/image.jpg')
-		meta(property='og:description', content=siteDescription)
-		meta(property='og:site_name', content=siteTitle)
-		meta(property='article:author', content=siteTitle)
-		meta(name='twitter:card', content='summary')
-		meta(name='twitter:site', content='@pmeissner')
-		meta(name='twitter:creator', content='@pmeissner')
-		meta(name='twitter:url', content=siteURL)
-		meta(name='twitter:title', content=siteTitle)
-		meta(name='twitter:description', content=siteDescription)
-		meta(name='twitter:image', content='#{siteURL}/image.jpg')
-		link(rel='canonical', href=siteURL)
-		meta(name='apple-mobile-web-app-capable', content='yes')
-		meta(name='apple-mobile-web-app-status-bar-style', content='black')
-		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
-		link(rel='stylesheet', href='css/main.css')
-		link(rel="stylesheet" href="https://use.typekit.net/mof1vvv.css")
-		link(rel='stylesheet', href='css/aos.css')
-	body
-		mixin ltr(letter,delay)
-			span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
-				span= letter
-		h1
-			+ltr('P','300')
-			+ltr('h','400')
-			+ltr('I','500')
-			+ltr('l','600')
-			+ltr('M','700')
-			+ltr('e','800')
-			+ltr('i','900')
-			+ltr('s','1000')
-			+ltr('S','1100')
-			+ltr('n','1200')
-			+ltr('E','1300')
-			+ltr('r','1400')
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-		script(src='js/main-min.js')
-		script.
-			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-			ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-		script(src='https://www.google-analytics.com/analytics.js', async='', defer='')
+extends layout
+
+block content
+	.switch__container
+		input#switch.switch(type="checkbox")
+		label#test(for="switch")
+
+	mixin ltr(letter,delay)
+		span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
+			span= letter
+	h1
+		+ltr('P','0')
+		+ltr('h','100')
+		+ltr('I','200')
+		+ltr('l','300')
+		+ltr('M','400')
+		+ltr('e','500')
+		+ltr('i','600')
+		+ltr('s','7000')
+		+ltr('S','800')
+		+ltr('n','900')
+		+ltr('E','1000')
+		+ltr('r','1100')
