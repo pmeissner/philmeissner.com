@@ -30,8 +30,8 @@ svg { width: 200px;
   transition: all 1s;
   overflow: hidden;
   width: 100%;
-  > span { background-image: linear-gradient(to top left, #111 0%, #222 100%); display: flex; align-items: center;
-	  span { width: 100%; }
+  > span { background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%); display: flex; align-items: center;
+	  span { width: 100%; color: rgb(0,255,0); text-shadow: 0px 0px 10px #00b100; }
   }
 	@media #{$xl} { grid-template-columns: 1fr 1fr 1fr 1fr; }
 	}

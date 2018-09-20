@@ -27,11 +27,13 @@ svg {
   overflow: hidden;
   width: 100%; }
   .grid > span {
-    background-image: linear-gradient(to top left, #111 0%, #222 100%);
+    background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%);
     display: flex;
     align-items: center; }
     .grid > span span {
-      width: 100%; }
+      width: 100%;
+      color: lime;
+      text-shadow: 0px 0px 10px #00b100; }
   @media screen and (min-width: 80em) {
     .grid {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
