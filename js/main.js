@@ -4,10 +4,12 @@ $(document).ready(function() {
 AOS.init();
 
 $("#switch").click(function () {
-	$('h1 > span').removeClass('aos-animate');
+	$('.grid > span').removeClass('aos-animate');
+	$('.grid').fadeOut("slow");
 	setTimeout(
   	function()
 			{
+			$('.grid').fadeIn();
 			$("body").toggleClass("work");
 			AOS.refreshHard();
   	}, 400);

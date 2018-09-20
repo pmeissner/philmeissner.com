@@ -10,7 +10,7 @@ block content
 	mixin ltr(letter,delay)
 		span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
 			span= letter
-	h1
+	.grid
 		+ltr('P','0')
 		+ltr('h','100')
 		+ltr('I','200')
@@ -23,3 +23,13 @@ block content
 		+ltr('n','900')
 		+ltr('E','1000')
 		+ltr('r','1100')
+		//
+			span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
+				span
+					include img/designer-community-behance.svg
+			span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
+				span
+					include img/designer-community-behance.svg
+			span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
+				span
+					include img/designer-community-behance.svg

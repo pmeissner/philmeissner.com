@@ -7,35 +7,44 @@ $xl:	"screen and (min-width: 80em)";
 
 *, *:before, *:after { box-sizing: border-box; }
 
-h1 {
+svg { width: 200px;
+	path { stroke: #000; width: .5; }
+}
+
+.grid {
 	background: #000;
 	border: .33vw solid #000;
 	grid-gap: .33vw;
 	margin: 0;
 	padding: 0;
-	font-size: 15vw;
+	font-size: 16vw;
 	line-height: 1;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: "rosella-deco", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
+	font-family: 	"hobeaux-rococeaux", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
 	font-weight: 400;
 	display: grid;
 	height: 100vh;
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: stretch;
-  grid-template-rows: 1fr 1fr 1fr;
   transition: all 1s;
   overflow: hidden;
   width: 100%;
-  > span { background-image: linear-gradient(to top left, #a18cd1 0%, #fbc2eb 100%); display: flex; align-items: center;
+  > span { background-image: linear-gradient(to top left, #111 0%, #222 100%); display: flex; align-items: center;
 	  span { width: 100%; }
   }
 	@media #{$xl} { grid-template-columns: 1fr 1fr 1fr 1fr; }
 	}
 
 body.work {
-	h1 {
-		font-family: "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
+	.grid {
+		background: #fff;
+		border: .33vw solid #fff;
+		font-family: "rosella-deco", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
+		color: #ddd;
+		> span { background-image: linear-gradient(to top left, #f1f1f1 0%, #eee 100%);
+	  	span { align-self: flex-start; }
+		}
 	}
 }
 
