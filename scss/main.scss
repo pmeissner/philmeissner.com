@@ -12,9 +12,7 @@ svg { width: 200px;
 }
 
 .grid {
-	background: #000;
-	border: .33vw solid #000;
-	grid-gap: .33vw;
+	background: url('../img/jungle.png') left top #000; background-size: 75% auto;
 	margin: 0;
 	padding: 0;
 	font-size: 16vw;
@@ -30,8 +28,11 @@ svg { width: 200px;
   transition: all 1s;
   overflow: hidden;
   width: 100%;
-  > span { background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%); display: flex; align-items: center;
-	  span { width: 100%; color: rgb(0,255,0); text-shadow: 0px 0px 10px #00b100; }
+  color: rgb(0,255,0);
+  text-shadow: 0px 0px 10px #00b100;
+  > span { /* background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%); */ display: flex; align-items: center;
+	  &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) { color: rgb(175,255,0); text-shadow: 0px 0px 10px 10px rgba(255,255,255,1); }
+	  span { width: 100%; }
   }
 	@media #{$xl} { grid-template-columns: 1fr 1fr 1fr 1fr; }
 	}
@@ -40,6 +41,7 @@ body.work {
 	.grid {
 		background: #fff;
 		border: .33vw solid #fff;
+		grid-gap: .33vw;
 		font-family: "rosella-deco", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
 		color: #ddd;
 		> span { background-image: linear-gradient(to top left, #f1f1f1 0%, #eee 100%);

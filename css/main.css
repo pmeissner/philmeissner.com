@@ -8,9 +8,8 @@ svg {
     width: .5; }
 
 .grid {
-  background: #000;
-  border: .33vw solid #000;
-  grid-gap: .33vw;
+  background: url("../img/jungle.png") left top #000;
+  background-size: 75% auto;
   margin: 0;
   padding: 0;
   font-size: 16vw;
@@ -25,15 +24,18 @@ svg {
   align-items: stretch;
   transition: all 1s;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  color: lime;
+  text-shadow: 0px 0px 10px #00b100; }
   .grid > span {
-    background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%);
+    /* background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%); */
     display: flex;
     align-items: center; }
+    .grid > span:nth-child(1), .grid > span:nth-child(2), .grid > span:nth-child(3), .grid > span:nth-child(4) {
+      color: #afff00;
+      text-shadow: 0px 0px 10px 10px white; }
     .grid > span span {
-      width: 100%;
-      color: lime;
-      text-shadow: 0px 0px 10px #00b100; }
+      width: 100%; }
   @media screen and (min-width: 80em) {
     .grid {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
@@ -41,6 +43,7 @@ svg {
 body.work .grid {
   background: #fff;
   border: .33vw solid #fff;
+  grid-gap: .33vw;
   font-family: "rosella-deco", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
   color: #ddd; }
   body.work .grid > span {
