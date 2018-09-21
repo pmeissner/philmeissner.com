@@ -8,25 +8,26 @@ svg {
     width: .5; }
 
 .grid {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../img/jungle.png");
-  background-position: center center, left top;
-  background-size: cover, 50% auto;
-  background-color: #000;
   margin: 0;
   padding: 5vh 2vw;
-  font-size: 15vw;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "hobeaux-rococeaux", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
-  font-weight: 400;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: stretch;
   transition: all 1s;
-  overflow: hidden;
   width: 100%;
+  text-transform: uppercase; }
+
+.grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../img/jungle.png");
+  background-position: center center, left top;
+  background-size: cover, 1000px auto;
+  background-color: #000;
+  font-size: 15vw;
+  line-height: 1;
+  text-align: center;
+  font-family: "hobeaux-rococeaux", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
+  font-weight: 400;
+  align-items: stretch;
   color: lime; }
   .grid > span {
     display: flex;
@@ -53,15 +54,17 @@ svg {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
 body.work .grid {
-  background: #fff;
-  border: .33vw solid #fff;
-  grid-gap: .33vw;
-  font-family: "rosella-deco", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
-  color: #ddd; }
-  body.work .grid > span {
-    background-image: linear-gradient(to top left, #f1f1f1 0%, #eee 100%); }
-    body.work .grid > span span {
-      align-self: flex-start; }
+  background: #660000;
+  font-family: "Nosifer","rosella-deco", "hwt-american-shopworn", "hobeaux-rococeaux", "muscle-wide";
+  color: red;
+  text-shadow: none; }
+  body.work .grid > span:nth-child(1), body.work .grid > span:nth-child(2), body.work .grid > span:nth-child(3), body.work .grid > span:nth-child(4) {
+    color: yellow;
+    text-shadow: none; }
+    body.work .grid > span:nth-child(1) span.shadow, body.work .grid > span:nth-child(2) span.shadow, body.work .grid > span:nth-child(3) span.shadow, body.work .grid > span:nth-child(4) span.shadow {
+      color: rgba(255, 255, 0, 0.2); }
+  body.work .grid > span span {
+    align-self: flex-start; }
 
 .shadow {
   text-shadow: none !important; }
