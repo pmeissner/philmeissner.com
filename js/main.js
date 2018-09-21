@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 AOS.init();
 
-$("#switch").click(function () {
+$(".red-button").click(function () {
 	$('.grid > span').removeClass('aos-animate');
 	$('.grid').fadeOut("slow");
 	setTimeout(
