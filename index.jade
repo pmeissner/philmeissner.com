@@ -3,13 +3,11 @@ block vars
 extends layout
 
 block content
-	.switch__container
-		input#switch.switch(type="checkbox")
-		label#test(for="switch")
 
 	mixin ltr(letter,delay)
 		span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
-			span= letter
+			span.letter= letter
+			span.shadow= letter
 	.grid
 		+ltr('P','0')
 		+ltr('h','100')
@@ -33,3 +31,7 @@ block content
 			span(data-aos-once data-aos="flip-right" data-aos-duration="600" data-aos-delay=delay)
 				span
 					include img/designer-community-behance.svg
+
+	.switch__container
+		input#switch.switch(type="checkbox")
+		label#test(for="switch")

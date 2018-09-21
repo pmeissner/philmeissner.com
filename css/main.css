@@ -8,11 +8,12 @@ svg {
     width: .5; }
 
 .grid {
-  background: url("../img/jungle.png") left top #000;
-  background-size: 45% auto;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../img/jungle.png");
+  background-position: center center, left top;
+  background-size: cover, 50% auto;
   margin: 0;
-  padding: 4vh 2vw;
-  font-size: 16vw;
+  padding: 5vh 2vw;
+  font-size: 15vw;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
@@ -25,18 +26,28 @@ svg {
   transition: all 1s;
   overflow: hidden;
   width: 100%;
-  color: lime;
-  text-shadow: 0px 0px 10px #00b100; }
+  color: lime; }
   .grid > span {
-    /* background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%); */
     display: flex;
     align-items: center; }
     .grid > span:nth-child(1), .grid > span:nth-child(2), .grid > span:nth-child(3), .grid > span:nth-child(4) {
-      color: #afff00;
+      color: yellow;
       text-shadow: 0px 0px 10px 10px white; }
+      .grid > span:nth-child(1) span.shadow, .grid > span:nth-child(2) span.shadow, .grid > span:nth-child(3) span.shadow, .grid > span:nth-child(4) span.shadow {
+        color: rgba(255, 255, 0, 0.2); }
     .grid > span span {
-      width: 100%; }
-  @media screen and (min-width: 80em) {
+      width: 100%;
+      text-shadow: 0px 0px 10px #00b100; }
+      .grid > span span.letter {
+        z-index: 1; }
+      .grid > span span.shadow {
+        font-family: "hobeaux-rococeaux-background";
+        color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: 0;
+        transform: translate-x(-20px);
+        /* text-shadow: 0px 0px 10px #00b100 */ }
+  @media screen and (min-width: 64em) {
     .grid {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
@@ -50,6 +61,9 @@ body.work .grid {
     background-image: linear-gradient(to top left, #f1f1f1 0%, #eee 100%); }
     body.work .grid > span span {
       align-self: flex-start; }
+
+.shadow {
+  text-shadow: none !important; }
 
 /* Estilo iOS */
 .switch__container {

@@ -12,10 +12,10 @@ svg { width: 200px;
 }
 
 .grid {
-	background: url('../img/jungle.png') left top #000; background-size: 45% auto;
+	background-image: radial-gradient(rgba(#000,.2),rgba(#000,.9)), url('../img/jungle.png'); background-position: center center, left top; background-size: cover, 50% auto;
 	margin: 0;
-	padding: 4vh 2vw;
-	font-size: 16vw;
+	padding: 5vh 2vw;
+	font-size: 15vw;
 	line-height: 1;
 	text-align: center;
 	text-transform: uppercase;
@@ -29,12 +29,16 @@ svg { width: 200px;
   overflow: hidden;
   width: 100%;
   color: rgb(0,255,0);
-  text-shadow: 0px 0px 10px #00b100;
-  > span { /* background-image: linear-gradient(to top left, #000d00 0%, #001a00 100%); */ display: flex; align-items: center;
-	  &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) { color: rgb(175,255,0); text-shadow: 0px 0px 10px 10px rgba(255,255,255,1); }
-	  span { width: 100%; }
+  > span { display: flex; align-items: center;
+	  &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) { color: rgb(255,255,0); text-shadow: 0px 0px 10px 10px rgba(255,255,255,1);
+		  span.shadow { color: rgba(yellow,.2); }
+	  }
+	  span { width: 100%; text-shadow: 0px 0px 10px #00b100;
+		  &.letter { z-index: 1;  }
+		  &.shadow { font-family: "hobeaux-rococeaux-background"; color: rgba(#000,.5); position: absolute; z-index: 0; transform: translate-x(-20px); /* text-shadow: 0px 0px 10px #00b100 */; }
+	  }
   }
-	@media #{$xl} { grid-template-columns: 1fr 1fr 1fr 1fr; }
+	@media #{$lg} { grid-template-columns: 1fr 1fr 1fr 1fr; }
 	}
 
 body.work {
@@ -50,6 +54,7 @@ body.work {
 	}
 }
 
+.shadow { text-shadow: none!important; }
 
 /* Estilo iOS */
 .switch__container {
